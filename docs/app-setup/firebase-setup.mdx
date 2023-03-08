@@ -1,0 +1,40 @@
+# Firebase Setup
+
+:::caution
+
+This project cannot work without firebase
+
+:::
+
+**[Firebase](https://firebase.com/)** is a popular choice for React Native projects as it provides a range of tools and services that can be used to build robust, scalable, and secure mobile applications. Some of the key Firebase services that are used in this project are:
+
+* **Notifications**: Firebase Cloud Messaging allows developers to send notifications and messages to mobile devices, web applications, and desktop clients.
+* **Analytics**: Firebase Analytics provides insights into user behavior and app performance. It tracks various metrics, such as user engagement, retention, and conversion, and provides real-time reporting.
+
+First of all, go to the **[Firebase Console](https://console.firebase.google.com/)** and create a new project.
+
+![Create a new firebase Project step 1](/img/app-setup/firebase-setup-new-project-step-1.png)
+
+Make sure `Enable Google Analytics for this project` is checked
+
+![Create a new firebase Project step 2](/img/app-setup/firebase-setup-new-project-step-2.png)
+## Android Setup
+
+To allow the Android app to securely connect to your Firebase project, a configuration file must be downloaded and added to your project.
+
+### Generating Android credentials
+
+On the Firebase console, add a new Android application and enter your projects details. The "Android package name" must match your local projects package name which can be found inside of the `manifest` tag within the `/android/app/src/main/AndroidManifest.xml` file within your project.
+
+
+## Step 2: Link your project with Sentry
+
+### Automatically
+
+Run @sentry/wizard
+```bash
+npx @sentry/wizard -i reactNative -p ios android
+```
+
+### Manually
+//TODO

@@ -1,0 +1,33 @@
+# Sentry Setup
+
+:::note
+
+We highly recommand you to use  Sentry for this project.
+
+:::
+
+**[Sentry](https://sentry.io/)** is a cloud-based error tracking platform that helps developers to monitor and debug their applications. It provides real-time insights into errors and exceptions occurring in the application, allowing developers to quickly diagnose and fix issues. Sentry supports a wide range of programming languages and frameworks, including React Native.
+
+If you don't want to use Sentry for this project, you can disable it in `.env` file:
+
+```.dotenv title='.env'
+ENABLE_SENTRY=false
+```
+
+If you don't want to use Sentry, you can skip the following part.
+
+## Step 1: Create a Sentry account and project
+
+Before you can start using Sentry in your mobile application, you need to create an account and a project in Sentry. You can do this by visiting the **[Sentry Website](https://sentry.io/signup/)**.
+
+## Step 2: Link your project with Sentry
+
+### Automatically
+
+Run @sentry/wizard
+```bash
+npx @sentry/wizard -i reactNative -p ios android
+```
+
+### Manually
+//TODO
