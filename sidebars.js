@@ -38,10 +38,31 @@ const sidebars = {
             type: 'category',
             label: 'App Setup',
             items: [
-                'app-setup/react-native-setup',
-                'app-setup/firebase-setup',
-                'app-setup/onesignal-setup',
-                'app-setup/sentry-setup',
+                {
+                    type: 'doc',
+                    label: 'React Native Setup',
+                    id: 'app-setup/react-native-setup',
+                },
+                {
+                    type: 'category',
+                    label: 'Firebase setup',
+                    link: {
+                        type: 'doc',
+                        id: 'app-setup/firebase-setup/firebase-setup',
+                    },
+                    items: [
+                        'app-setup/firebase-setup/android-firebase-setup',
+                        'app-setup/firebase-setup/ios-firebase-setup',
+                    ],
+                },
+                {
+                    type: 'doc',
+                    id: 'app-setup/onesignal-setup',
+                },
+                {
+                    type: 'doc',
+                    id: 'app-setup/sentry-setup',
+                },
             ],
         },
     ],

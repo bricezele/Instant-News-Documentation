@@ -1,0 +1,28 @@
+# Android Setup
+
+Steps to sync an Android project with Firebase:
+
+On the Firebase console, add a new Android application and enter your projects details.
+
+![Create a new Android Firebase step 1](/img/app-setup/firebase-setup-android-step-1.png)
+
+:::info
+
+The "Android package name" must match your local projects package name which can be found inside of the `manifest` tag within the `/android/app/src/main/AndroidManifest.xml` file within your project.
+
+:::
+
+![Create a new Android Firebase step 2](/img/app-setup/firebase-setup-android-step-2.png)
+
+Once you have created a new project, you can add an Android app to it. You'll need to provide a package name for your app.
+
+Download the google-services.json file, which contains the necessary configuration details for your app to connect with Firebase.
+
+![Create a new Android Firebase step 3](/img/app-setup/firebase-setup-android-step-3.png)
+
+Move the downloaded google-services.json file into the app/ directory of your Android project.
+
+![Create a new Android Firebase step 4](/img/app-setup/firebase-setup-android-step-4.png)
+
+
+That's it! Your Android project should now be synced with Firebase, and you should be able to use Firebase services (Analytics, Push Notifications) in your app.
